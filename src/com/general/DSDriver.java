@@ -6,13 +6,17 @@ import com.own.utils.ds.common.Iterator;
 
 public class DSDriver {
 
-	public void checkLinkedList() {
+	public void checkLinkedList() throws UtilException {
 
 		// With integer only - homogeneous data
 		LinkedList<Integer> myList = new LinkedList<>();
 		myList.add(1);
 		myList.add(2);
-		myList.add(3);
+		myList.add(4);
+		myList.insertAt(0, 2);
+		myList.insertAtEnd(55);
+		myList.insertAtStart(-2);
+		myList.deleteAt(4);
 
 		System.out.println("mylist Size : " + myList.getSize());
 		Iterator<Integer> itr = myList.getIterator();
@@ -47,7 +51,7 @@ public class DSDriver {
 		}
 	}
 
-	public static void main(String args[]) {
+	public static void main(String args[]) throws UtilException {
 		DSDriver dsd = new DSDriver();
 		dsd.checkLinkedList();
 		dsd.checkLinkedStack();
