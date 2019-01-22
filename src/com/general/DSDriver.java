@@ -2,6 +2,7 @@ package com.general;
 
 import com.own.utils.ds.LinkedList;
 import com.own.utils.ds.LinkedStack;
+import com.own.utils.ds.Tree;
 import com.own.utils.ds.common.Iterator;
 
 public class DSDriver {
@@ -51,9 +52,42 @@ public class DSDriver {
 		}
 	}
 
+	public void checkIntTree() {
+		Tree<Integer> t = new Tree<>();
+		t.insert(7);
+		t.insert(10);
+		t.insert(2);
+		t.insert(3);
+		t.insert(8);
+		t.insert(11);
+		t.insert(0);
+		t.insert(1);
+		t.insert(9);
+		System.out.println("Tree size : " + t.getSize());
+		t.printTree();
+
+	}
+	
+	public void checkStringTree() {
+		Tree<String> t = new Tree<>();
+		t.insert("New Zealand");
+		t.insert("Australia");
+		t.insert("Europe");
+		t.insert("India");
+		t.insert("Canada");
+		t.insert("Zimbabwe");
+		t.insert("Asia");
+		t.insert("America");
+		t.insert("Germany");
+		System.out.println("Tree size : " + t.getSize());
+		t.printTree();
+
+	}
+
 	public static void main(String args[]) throws UtilException {
 		DSDriver dsd = new DSDriver();
-		dsd.checkLinkedList();
-		dsd.checkLinkedStack();
+		// dsd.checkLinkedList();
+		// dsd.checkLinkedStack();
+		dsd.checkStringTree();
 	}
 }
